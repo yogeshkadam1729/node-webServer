@@ -33,11 +33,10 @@ hbs.registerHelper('getCurrentYear',() =>{
 });//Helper which used in replacing redudant code from caller every time to hbs partials
 
 app.get('/', (req,res) =>{
-  res.send('<h1>Hi Yogesh</h1>');
+  res.render('about.hbs',{pageTittle :'About Page',paragraph :'This is the sample paragraph for hbs testing'});
 });
 
 app.get('/about', (req,res) =>{
-
   res.render('about.hbs',{pageTittle :'About Page',paragraph :'This is the sample paragraph for hbs testing'});
 });
 

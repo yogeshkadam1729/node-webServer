@@ -1,6 +1,7 @@
 const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
+const port = process.env.PORT || 3000;
 var app = express();
 
 
@@ -44,4 +45,6 @@ app.get('/error', (req,res) =>{
 
   res.send({errorMessage :'Unable to serve the request'});
 });
-app.listen(3000);
+app.listen(port, () =>{
+  console.log(`app listening the port ${port}`);
+});
